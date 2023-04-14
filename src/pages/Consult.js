@@ -1,5 +1,66 @@
 import { Content } from "../components/Content";
-
+import React, {useState} from 'react';
+import Select from "../components/Select";
+import "../pages/Consult.css";
 export const Consult = () => {
-  return <Content></Content>;
+  
+  const inquirie = [
+    {
+      semester: '2021-1',
+      faculty: 'Ingenieria',
+      subject_matter: ['Cálculo diferencial', 'Introducción', 'Geometria'],
+    },
+    {
+      semester: '2023-1',
+      faculty: 'Medicina',
+      subject_matter: ['Cálculo diferencial', 'Introducción', 'Geometria'],
+    },
+    {
+      semester: '2022-1',
+      faculty: 'Artes',
+      subject_matter: ['Cálculo diferencial', 'Introducción', 'Geometria'],
+    },
+  ];
+  const [selectedSemester, setSelectedSemester] = useState(-1);
+  const [selectedFaculty, setSelectedFaculty] = useState(null);
+  const subjectMatterOptions = inquirie[selectedFaculty]?.subject_matter || [];
+  const handlerSemesterChange = (e) => {
+    const option = e.target.value;
+    console.log(option);
+    setSelectedSemester(option);
+  };
+
+  const handleFacultyChange = (e) => {
+    const option = e.target.value;
+    setSelectedFaculty(option);
+  };
+  
+ return <Content>
+     <div className="container">
+     <p className="title" >Consulta de Evaluaciones</p>
+     <div className="container2">
+     <h3 className="title3">Semestre</h3>
+     <Select
+            options={inquirie.map((item, i) => ({ value: i, label: item.semester }))}
+            onChange={handlerSemesterChange}
+          />
+     </div>
+      <div className="container2">
+      <h3 className="title3">Facultad</h3>
+      <Select
+          options={inquirie.map((item, i) => ({ value: i, label: item.faculty }))}
+          onChange={handleFacultyChange}
+        />
+      </div>
+      <div className="container2">
+      <h3 className="title3">Materia</h3>
+      <Select
+  options={subjectMatterOptions.map((item, i) => ({ value: i, label: item }))}
+  onChange={() => {}}
+/>
+      </div>
+      <button>Buscar</button>
+    </div>
+  
+  </Content>;
 };
