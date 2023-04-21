@@ -1,0 +1,50 @@
+div.container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--container-color);
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 24px 12px;
+    gap: 24px;
+    border-radius: 12px;
+  }
+.super-container{
+    display: flex;
+    flex-direction: row;
+    width: min(65vw,600px);
+    align-items: center;
+    background-color: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    gap: 12px;
+}
+.small-container{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+}
+.small-container h2{
+    margin-top: 5px;
+}
+p.codigo {
+    margin-top: -20px;
+    font-size: 13px;
+    margin-left: -10px;
+  }
+  
+h3.facultad{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 3px;
+  }
+
+  .button-container{
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: 600;
+  }
