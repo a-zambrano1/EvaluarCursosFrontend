@@ -5,22 +5,35 @@
   --background-light: #409c89;
   --default-hover: #2b7566;
   --container-color: #eafffa;
+  --color1: #beece2;
+}
+
+#root {
+  align-items: center;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   background: linear-gradient(
     90deg,
     rgba(64, 156, 137, 1) 0%,
     rgba(38, 107, 66, 1) 100%
   );
+  min-height: calc(100vh - 16px);
+  margin: 0;
+  overflow-x: hidden;
 }
 
 * {
   font-family: "Roboto";
+}
+
+div.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  top: 140px;
 }
 
 div.container {
@@ -35,7 +48,38 @@ div.container {
   border-radius: 12px;
 }
 
-input {
+div.container2 {
+  display: flex;
+  align-items: center;
+}
+
+div.form_buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+div.form {
+  max-width: 100%;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+input,
+textarea {
+  border-radius: 10px;
+  padding: 8px;
+  outline: none;
+  border: 1px solid var(--background-light);
+}
+
+textarea {
+  resize: none;
+}
+
+select.container4 {
   border-radius: 10px;
   padding: 8px;
   outline: none;
@@ -51,6 +95,19 @@ p.title {
   font-weight: 900;
 }
 
+p.form_aspect {
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+  color: white;
+}
+
+p.form_question {
+  text-align: center;
+  color: white;
+  font-size: 22px;
+}
+
 button {
   background-color: var(--background-light);
   color: white;
@@ -63,5 +120,17 @@ button {
 
 button:hover {
   background-color: var(--default-hover);
+  cursor: pointer;
+}
+
+button.form {
+  min-width: 100px;
+  background-color: var(--container-color);
+  color: var(--background-dark);
+  font-size: 16px;
+}
+
+button.form:hover {
+  background-color: var(--color1);
   cursor: pointer;
 }
