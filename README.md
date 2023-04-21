@@ -1,3 +1,8 @@
+# MOCKUPS
+
+https://www.figma.com/file/C7RYWYcXItmB4DZZlXQ7LI/Evaluar-Cursos?node-id=0-1&t=UAJZPOhVZAQBVRWg-0
+https://www.figma.com/file/MmcZFJV8Nz0cMmopl9jy3d/Evaluar-Cursos?node-id=1-4&t=f6b9vOSGSFWE30Lf-0
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
